@@ -68,6 +68,17 @@ def create_app(config_class=Config):
     app.register_blueprint(simulation_bp, url_prefix='/api/simulation')
     app.register_blueprint(report_bp, url_prefix='/api/report')
     
+    # 生产环境部署：直接由后端托管前端静态文件
+    # 前端构建产物需放置在 backend/app/static/dist 目录下
+    if not debug_mode:
+        @app.route('/', defaults={'path': ''})
+        @app.route('/<path:path>')
+        def serve_frontend(path):
+            if path != "" and os.path.exists(os.path.join(app.static_folder, 'dist', path)):
+                return app.send_static_file(os.path.join('dist', path))
+            else:
+                return app.send_static_file('dist/index.html')
+    
     # 健康检查
     @app.route('/health')
     def health():

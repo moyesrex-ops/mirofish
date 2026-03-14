@@ -1,0 +1,32 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/mirofish', '-f', 'Dockerfile.cloudrun', '.']
+  
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/mirofish']
+  
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'mirofish'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/mirofish'
+      - '--region'
+      - 'us-central1'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      # Set environment variables from substitution variables or secrets
+      # For simplicity, we use the build environment variables, but secrets manager is better for production
+      - '--set-env-vars'
+      - 'LLM_MODEL_NAME=google/gemini-1.5-flash-002'
+      - '--set-env-vars'
+      - 'FLASK_DEBUG=false'
+
+images:
+  - 'gcr.io/$PROJECT_ID/mirofish'

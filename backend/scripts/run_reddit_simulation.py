@@ -433,12 +433,9 @@ class RedditSimulationRunner:
     
     def _create_model(self):
         """
-        创建LLM模型
+        创建LLM模型，统一从 .env 配置
         
-        统一使用项目根目录 .env 文件中的配置（优先级最高）：
-        - LLM_API_KEY: API密钥
-        - LLM_BASE_URL: API基础URL
-        - LLM_MODEL_NAME: 模型名称
+        支持 Vertex AI Token 自动刷新和多模型切换
         """
         # 优先从 .env 读取配置
         llm_api_key = os.environ.get("LLM_API_KEY", "")
@@ -447,8 +444,20 @@ class RedditSimulationRunner:
         
         # 如果 .env 中没有，则使用 config 作为备用
         if not llm_model:
-            llm_model = self.config.get("llm_model", "gpt-4o-mini")
-        
+            llm_model = self.config.get("llm_model", "google/gemini-1.5-flash-002")
+
+        # 如果是 Vertex AI 环境，自动获取最新 Token
+        is_vertex = llm_base_url and 'googleapis.com' in llm_base_url
+        if is_vertex:
+            try:
+                print(f"检测到 Vertex AI 环境，正在获取 Access Token...")
+                import subprocess
+                result = subprocess.run(['gcloud', 'auth', 'print-access-token'], capture_output=True, text=True, check=True, shell=True if os.name == 'nt' else False)
+                llm_api_key = result.stdout.strip()
+                print("Access Token 获取成功")
+            except Exception as e:
+                print(f"警告: 获取 Vertex AI Token 失败: {e}，将尝试使用原有的 LLM_API_KEY")
+
         # 设置 camel-ai 所需的环境变量
         if llm_api_key:
             os.environ["OPENAI_API_KEY"] = llm_api_key
@@ -459,7 +468,7 @@ class RedditSimulationRunner:
         if llm_base_url:
             os.environ["OPENAI_API_BASE_URL"] = llm_base_url
         
-        print(f"LLM配置: model={llm_model}, base_url={llm_base_url[:40] if llm_base_url else '默认'}...")
+        print(f"LLM配置: model={llm_model}, base_url={llm_base_url[:60] if llm_base_url else '默认'}...")
         
         return ModelFactory.create(
             model_platform=ModelPlatformType.OPENAI,
