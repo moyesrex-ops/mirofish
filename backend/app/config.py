@@ -30,7 +30,7 @@ class Config:
     # LLM配置（Vertex AI OpenAI-compatible endpoint）
     LLM_API_KEY = os.environ.get('LLM_API_KEY')
     # Vertex AI OpenAI-compatible 基础 URL 格式 (注意末尾不带 /，openai 会自动加 /chat/completions)
-    LLM_BASE_URL = os.environ.get('LLM_BASE_URL', 'https://us-central1-aiplatform.googleapis.com/v1/projects/reference-city-xrjsb/locations/us-central1/endpoints/openapi')
+    LLM_BASE_URL = os.environ.get('LLM_BASE_URL', 'https://us-central1-aiplatform.googleapis.com/v1/projects/flowing-coil-487305-c6/locations/us-central1/endpoints/openapi')
     LLM_MODEL_NAME = os.environ.get('LLM_MODEL_NAME', 'google/gemini-1.5-flash-002')
     
     # 扩展：支持多个 Vertex AI / OpenAI 模型

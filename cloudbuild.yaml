@@ -24,6 +24,8 @@ steps:
       # Set environment variables from substitution variables or secrets
       # For simplicity, we use the build environment variables, but secrets manager is better for production
       - '--set-env-vars'
+      - 'LLM_BASE_URL=https://us-central1-aiplatform.googleapis.com/v1/projects/flowing-coil-487305-c6/locations/us-central1/endpoints/openapi'
+      - '--set-env-vars'
       - 'LLM_MODEL_NAME=google/gemini-1.5-flash-002'
       - '--set-env-vars'
       - 'FLASK_DEBUG=false'
