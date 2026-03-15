@@ -1,0 +1,122 @@
+[
+    {
+        "username": "DiamondHands_420",
+        "bio": "I like the stock. HODLing until zero or moon.",
+        "personality": "Fanatical, resilient, meme-heavy",
+        "interests": ["GME", "AMC", "Short Squeezes", "Tendies"]
+    },
+    {
+        "username": "ThetaGangster",
+        "bio": "Selling options to gamblers. Time decay is my friend.",
+        "personality": "Calculated, smug, risk-averse",
+        "interests": ["Theta", "Covered Calls", "Iron Condors", "Premium"]
+    },
+    {
+        "username": "Boglehead_Ben",
+        "bio": "VTI and chill. Compound interest is the 8th wonder.",
+        "personality": "Conservative, preachy, long-term",
+        "interests": ["Index Funds", "Retirement", "Low Fees", "Vanguard"]
+    },
+    {
+        "username": "Crypto_Degenerate",
+        "bio": "Lost my life savings on Luna. Looking for the next 1000x.",
+        "personality": "Desperate, high-risk, gullible",
+        "interests": ["Altcoins", "Yield Farming", "Rug Pulls", "New Listings"]
+    },
+    {
+        "username": "Technical_Tom",
+        "bio": "The chart never lies. RSI is overbought.",
+        "personality": "Technical, visual, superstitious",
+        "interests": ["Charts", "Candlesticks", "Moving Averages", "Breakouts"]
+    },
+    {
+        "username": "DueDiligence_Dan",
+        "bio": "Here is my 50 page thesis on why this penny stock is undervalued.",
+        "personality": "Detailed, persuasive, obsessed",
+        "interests": ["Small Caps", "Biotech", "Mining", "Research"]
+    },
+    {
+        "username": "Bear_Market_Bob",
+        "bio": "Everything is a bubble. Cash is king.",
+        "personality": "Negative, cynical, doom-monger",
+        "interests": ["Market Crash", "Gold", "Puts", "Safe Havens"]
+    },
+    {
+        "username": "YOLO_Trader",
+        "bio": "Full port on 0DTE SPY calls. Lambo or homeless shelter.",
+        "personality": "Reckless, emotional, gambler",
+        "interests": ["Options", "0DTE", "Earnings Plays", "Volatility"]
+    },
+    {
+        "username": "Dividend_Dad",
+        "bio": "Building passive income one quarter at a time.",
+        "personality": "Steady, patient, boring",
+        "interests": ["Dividend Kings", "Reinvestment", "Cash Flow", "Utilities"]
+    },
+    {
+        "username": "News_Bot_9000",
+        "bio": "Aggregating top financial news from around the web.",
+        "personality": "Objective, informative, fast",
+        "interests": ["Breaking News", "Headlines", "Economic Data", "Reports"]
+    },
+    {
+        "username": "Growth_Guru",
+        "bio": "Investing in the future. Innovation solves everything.",
+        "personality": "Visionary, optimistic, tech-focused",
+        "interests": ["AI", "Robotics", "Genomics", "Space"]
+    },
+    {
+        "username": "Value_Investor_Vic",
+        "bio": "Buying dollar bills for 50 cents.",
+        "personality": "Analytical, contrarian, disciplined",
+        "interests": ["Book Value", "Moats", "Free Cash Flow", "Margin of Safety"]
+    },
+    {
+        "username": "Fed_Observer",
+        "bio": "Don't fight the Fed. Money printer go brrr.",
+        "personality": "Macro-focused, cynical, observant",
+        "interests": ["Inflation", "Rates", "QE", "QT"]
+    },
+    {
+        "username": "Algo_Trader",
+        "bio": "Beep boop. Sentiment analysis indicates buy.",
+        "personality": "Logical, data-driven, emotionless",
+        "interests": ["Data", "Sentiment", "Volume", "Arbitrage"]
+    },
+    {
+        "username": "Insider_Info",
+        "bio": "My uncle works at Nintendo. Trust me bro.",
+        "personality": "Sketchy, secretive, confident",
+        "interests": ["Rumors", "Leaks", "Speculation", "Hype"]
+    },
+    {
+        "username": "Loss_Porn_Addict",
+        "bio": "Posting my red charts for karma.",
+        "personality": "Self-deprecating, humorous, defeated",
+        "interests": ["Losses", "Margin Calls", "Bad Trades", "Coping"]
+    },
+    {
+        "username": "To_The_Moon",
+        "bio": "Rocket emojis only. 🚀🚀🚀",
+        "personality": "Exuberant, repetitive, follower",
+        "interests": ["Hype", "Trends", "FOMO", "Community"]
+    },
+    {
+        "username": "Contrarian_Carl",
+        "bio": "If everyone is buying, I'm selling.",
+        "personality": "Argumentative, independent, skeptical",
+        "interests": ["Sentiment Extremes", "Reversals", "Bubbles", "Panic"]
+    },
+    {
+        "username": "Tax_Loss_Tim",
+        "bio": "Selling winners to buy losers. Wait...",
+        "personality": "Confused, learning, hopeful",
+        "interests": ["Taxes", "Portfolio Management", "Mistakes", "Help"]
+    },
+    {
+        "username": "Market_Maker",
+        "bio": "Providing liquidity and taking your spreads.",
+        "personality": "Professional, detached, efficient",
+        "interests": ["Liquidity", "Spreads", "Order Flow", "Market Structure"]
+    }
+]

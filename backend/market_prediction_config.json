@@ -1,0 +1,52 @@
+{
+  "simulation_id": "market_prediction_v1",
+  "description": "Simulation of market reaction to a surprise Fed rate hike announcement.",
+  "time_config": {
+    "total_simulation_hours": 24,
+    "minutes_per_round": 30,
+    "agents_per_hour_min": 8,
+    "agents_per_hour_max": 15,
+    "peak_hours": [9, 10, 11, 14, 15, 16],
+    "off_peak_hours": [0, 1, 2, 3, 4, 5],
+    "peak_activity_multiplier": 2.0,
+    "off_peak_activity_multiplier": 0.2
+  },
+  "event_config": {
+    "initial_posts": [
+      {
+        "poster_agent_id": 9,
+        "content": "BREAKING: Federal Reserve announces surprise 50bps rate hike citing persistent inflation concerns. Markets tumbling. $SPY $QQQ #Fed #Rates"
+      },
+      {
+        "poster_agent_id": 18,
+        "content": "Jerome Powell just declared war on your portfolio. Unemployment is too low, they say. This is going to get ugly. #Recession"
+      },
+      {
+        "poster_agent_id": 4,
+        "content": "Buy the blood! This is the flush we needed. Loading up on cheap tech. $NVDA $TSLA #BuyTheDip"
+      }
+    ]
+  },
+  "agent_configs": [
+    { "agent_id": 0, "entity_name": "MarketWizard", "active_hours": [8, 9, 10, 11, 12, 13, 14, 15, 16], "activity_level": 0.8 },
+    { "agent_id": 1, "entity_name": "CryptoKing", "active_hours": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], "activity_level": 0.9 },
+    { "agent_id": 2, "entity_name": "ValueVulture", "active_hours": [9, 10, 11, 12, 13, 14, 15, 16], "activity_level": 0.4 },
+    { "agent_id": 3, "entity_name": "TechTrend_AI", "active_hours": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], "activity_level": 1.0 },
+    { "agent_id": 4, "entity_name": "BearishBets", "active_hours": [8, 9, 10, 11, 12, 13, 14, 15, 16], "activity_level": 0.9 },
+    { "agent_id": 5, "entity_name": "BullishBob", "active_hours": [9, 10, 11, 14, 15, 16], "activity_level": 0.7 },
+    { "agent_id": 6, "entity_name": "DayTradeDave", "active_hours": [9, 10, 11, 15, 16], "activity_level": 1.0 },
+    { "agent_id": 7, "entity_name": "OptionsOracle", "active_hours": [9, 10, 11, 12, 13, 14, 15, 16], "activity_level": 0.6 },
+    { "agent_id": 8, "entity_name": "ForexFox", "active_hours": [2, 3, 4, 5, 6, 7, 8, 9, 10], "activity_level": 0.7 },
+    { "agent_id": 9, "entity_name": "InsiderGossip", "active_hours": [8, 12, 16, 20], "activity_level": 0.5 },
+    { "agent_id": 10, "entity_name": "ChartChaser", "active_hours": [9, 10, 11, 12, 13, 14, 15, 16, 20, 21], "activity_level": 0.8 },
+    { "agent_id": 11, "entity_name": "FundamentalPhil", "active_hours": [18, 19, 20, 21, 22], "activity_level": 0.3 },
+    { "agent_id": 12, "entity_name": "MemeStonkMike", "active_hours": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22], "activity_level": 0.9 },
+    { "agent_id": 13, "entity_name": "QuantQueen", "active_hours": [9, 10, 11, 12, 13, 14, 15, 16], "activity_level": 0.2 },
+    { "agent_id": 14, "entity_name": "EnergyBaron", "active_hours": [8, 9, 10, 11, 12], "activity_level": 0.5 },
+    { "agent_id": 15, "entity_name": "BioTechBill", "active_hours": [7, 8, 9, 10], "activity_level": 0.6 },
+    { "agent_id": 16, "entity_name": "ConsumerCathy", "active_hours": [10, 11, 12, 13, 14], "activity_level": 0.5 },
+    { "agent_id": 17, "entity_name": "RealEstateRick", "active_hours": [9, 10, 11, 12, 13, 14, 15, 16], "activity_level": 0.4 },
+    { "agent_id": 18, "entity_name": "FedWatcher", "active_hours": [8, 9, 10, 13, 14, 15], "activity_level": 0.8 },
+    { "agent_id": 19, "entity_name": "GlobalMacroGeorge", "active_hours": [0, 1, 2, 3, 4, 5, 6, 7, 8], "activity_level": 0.6 }
+  ]
+}
